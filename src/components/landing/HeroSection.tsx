@@ -21,7 +21,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Professional electrical design result"
+          alt="পেশাদার ইলেকট্রিক্যাল ডিজাইন"
           className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
@@ -37,9 +37,11 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6"
           >
-            Become an Audit-Ready
+            অডিট-রেডি ইন্ডাস্ট্রিয়াল
             <br />
-            <span className="text-gradient-yellow">Industrial Electrical Designer</span>
+            <span className="text-gradient-yellow">ইলেকট্রিক্যাল ডিজাইনার</span>
+            <br />
+            হয়ে উঠুন
           </motion.h1>
 
           {/* Sub-headline - Adds context and clarifies promise */}
@@ -49,7 +51,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Get the free skill assessment that shows exactly where your design knowledge gaps are—and how to fix them in 90 days.
+            বিনামূল্যে স্কিল অ্যাসেসমেন্ট নিন যা আপনার ডিজাইন জ্ঞানের ঘাটতি চিহ্নিত করবে—এবং ৯০ দিনে কীভাবে সেগুলো পূরণ করবেন তা দেখাবে।
           </motion.p>
 
           {/* Hero Image - Visual proof of outcome */}
@@ -62,13 +64,13 @@ const HeroSection = () => {
             <div className="relative mx-auto max-w-md rounded-xl overflow-hidden border border-border/50 shadow-lg">
               <img
                 src={heroImage}
-                alt="Code-compliant electrical design example"
+                alt="কোড-কমপ্লায়েন্ট ইলেকট্রিক্যাল ডিজাইন উদাহরণ"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-left">
-                <span className="text-xs text-accent font-semibold uppercase tracking-wider">What You'll Achieve</span>
-                <p className="text-sm text-foreground font-medium">BNBC-2020 & NFPA-70 Compliant Designs</p>
+                <span className="text-xs text-accent font-semibold uppercase tracking-wider">আপনি যা অর্জন করবেন</span>
+                <p className="text-sm text-foreground font-medium">BNBC-2020 এবং NFPA-70 কমপ্লায়েন্ট ডিজাইন</p>
               </div>
             </div>
           </motion.div>
@@ -83,7 +85,7 @@ const HeroSection = () => {
           >
             <Input
               type="text"
-              placeholder="Your name"
+              placeholder="আপনার নাম"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="h-14 text-base bg-card border-border/50 placeholder:text-muted-foreground/60"
@@ -91,7 +93,7 @@ const HeroSection = () => {
             />
             <Input
               type="email"
-              placeholder="Your best email"
+              placeholder="আপনার ইমেইল"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="h-14 text-base bg-card border-border/50 placeholder:text-muted-foreground/60"
@@ -100,7 +102,7 @@ const HeroSection = () => {
             
             {/* CTA - States what user gets and how */}
             <Button type="submit" variant="hero" size="xl" className="w-full">
-              Get My Free Skill Assessment
+              বিনামূল্যে স্কিল অ্যাসেসমেন্ট নিন
               <ArrowRight className="w-5 h-5" />
             </Button>
           </motion.form>
@@ -112,7 +114,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm text-muted-foreground mt-4"
           >
-            ✓ Free 5-minute assessment · ✓ Personalized gap report · ✓ No spam, ever
+            ✓ বিনামূল্যে ৫ মিনিটের অ্যাসেসমেন্ট · ✓ ব্যক্তিগত গ্যাপ রিপোর্ট · ✓ কোনো স্প্যাম নেই
           </motion.p>
         </div>
       </div>

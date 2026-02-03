@@ -39,7 +39,7 @@ const Navbar = () => {
                 <Zap className="w-4 h-4 text-accent-foreground" />
               </div>
               <span className="font-heading text-lg font-bold text-foreground">
-                Learnoz
+                লার্নোজ
               </span>
             </a>
 
@@ -50,7 +50,7 @@ const Navbar = () => {
               onClick={scrollToForm}
               className="hidden sm:flex"
             >
-              Get Free Assessment
+              বিনামূল্যে অ্যাসেসমেন্ট
             </Button>
           </div>
         </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-background/95 backdrop-blur-md border-t border-border/20 p-3">
         <Button variant="cta" size="default" className="w-full" onClick={scrollToForm}>
-          Get Free Assessment
+          বিনামূল্যে অ্যাসেসমেন্ট নিন
         </Button>
       </div>
     </>

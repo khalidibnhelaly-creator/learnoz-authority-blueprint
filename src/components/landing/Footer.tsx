@@ -11,20 +11,20 @@ const Footer = () => {
               <Zap className="w-4 h-4 text-accent-foreground" />
             </div>
             <span className="font-heading text-xl font-bold text-foreground">
-              Learnoz
+              লার্নোজ
             </span>
           </div>
 
           {/* Legal Links - Required */}
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-accent transition-colors">Contact</a>
+            <a href="#" className="hover:text-accent transition-colors">গোপনীয়তা নীতি</a>
+            <a href="#" className="hover:text-accent transition-colors">সেবার শর্তাবলী</a>
+            <a href="#" className="hover:text-accent transition-colors">যোগাযোগ</a>
           </div>
 
           {/* Copyright + Disclaimer */}
           <div className="text-xs text-muted-foreground max-w-xl">
-            © 2026 Learnoz. All rights reserved. Results mentioned are based on student testimonials and individual results may vary. This site is not a part of Facebook or Meta.
+            © ২০২৬ লার্নোজ। সর্বস্বত্ব সংরক্ষিত। উল্লিখিত ফলাফলগুলো শিক্ষার্থীদের অভিজ্ঞতার উপর ভিত্তি করে এবং ব্যক্তিভেদে ভিন্ন হতে পারে। এই সাইটটি Facebook বা Meta এর অংশ নয়।
           </div>
         </div>
       </div>

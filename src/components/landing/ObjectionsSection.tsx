@@ -11,18 +11,18 @@ const ObjectionsSection = () => {
   const objections = [
     {
       icon: Clock,
-      objection: "I don't have time for another course",
-      answer: "The assessment takes 5 minutes. The full course is self-paced with modules you can complete during commute or lunch breaks.",
+      objection: "আরেকটা কোর্সের জন্য আমার সময় নেই",
+      answer: "অ্যাসেসমেন্টে মাত্র ৫ মিনিট লাগে। পুরো কোর্সটি সেলফ-পেসড, যা আপনি যাতায়াতের সময় বা লাঞ্চ ব্রেকে সম্পন্ন করতে পারবেন।",
     },
     {
       icon: ShieldCheck,
-      objection: "Will this actually help me pass audits?",
-      answer: "Our students report a 98% audit pass rate. You'll learn the exact BNBC-2020 and NFPA-70 requirements that auditors check.",
+      objection: "এটা কি সত্যিই অডিট পাস করতে সাহায্য করবে?",
+      answer: "আমাদের স্টুডেন্টদের ৯৮% অডিট পাস রেট রয়েছে। আপনি BNBC-2020 এবং NFPA-70 এর সেই সঠিক রিকোয়ারমেন্টগুলো শিখবেন যা অডিটররা চেক করেন।",
     },
     {
       icon: GraduationCap,
-      objection: "I already have a degree in EEE",
-      answer: "Universities teach theory. We teach the code-based decision making that 90% of graduates are missing—the skills that get you hired and promoted.",
+      objection: "আমার তো ইইই তে ডিগ্রি আছে",
+      answer: "ইউনিভার্সিটিতে থিওরি পড়ানো হয়। আমরা কোড-বেসড ডিসিশন মেকিং শেখাই যা ৯০% গ্র্যাজুয়েটের নেই—যে স্কিলগুলো আপনাকে চাকরি এবং প্রমোশন পেতে সাহায্য করবে।",
     },
   ];
 
@@ -37,7 +37,7 @@ const ObjectionsSection = () => {
             transition={{ duration: 0.5 }}
             className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-12"
           >
-            You Might Be Wondering...
+            আপনার মনে হয়তো প্রশ্ন আছে...
           </motion.h2>
 
           {/* 3 Objection-handling bullets */}

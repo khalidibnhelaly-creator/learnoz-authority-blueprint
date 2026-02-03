@@ -10,26 +10,26 @@ const SocialProofSection = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const stats = [
-    { icon: Factory, value: "25+", label: "Factory Projects" },
-    { icon: Shield, value: "98%", label: "Audit Pass Rate" },
-    { icon: Users, value: "3,000+", label: "Engineers Trained" },
+    { icon: Factory, value: "২৫+", label: "ফ্যাক্টরি প্রজেক্ট" },
+    { icon: Shield, value: "৯৮%", label: "অডিট পাস রেট" },
+    { icon: Users, value: "৩,০০০+", label: "প্রশিক্ষিত ইঞ্জিনিয়ার" },
   ];
 
   const testimonials = [
     {
-      quote: "I failed 5 interviews before Learnoz. Now I lead a design team.",
-      name: "Md. Rahman Khan",
-      role: "Senior Electrical Engineer",
+      quote: "লার্নোজের আগে ৫টি ইন্টারভিউতে ফেইল করেছিলাম। এখন আমি একটি ডিজাইন টিম লিড করি।",
+      name: "মো. রহমান খান",
+      role: "সিনিয়র ইলেকট্রিক্যাল ইঞ্জিনিয়ার",
     },
     {
-      quote: "My audit pass rate went from 40% to 98%. This changed everything.",
-      name: "Tanvir Ahmed",
-      role: "Compliance Manager",
+      quote: "আমার অডিট পাস রেট ৪০% থেকে ৯৮% হয়েছে। এটা সবকিছু বদলে দিয়েছে।",
+      name: "তানভীর আহমেদ",
+      role: "কমপ্লায়েন্স ম্যানেজার",
     },
     {
-      quote: "From draftsman to designer in 3 months. Worth every taka.",
-      name: "Fatima Akter",
-      role: "Project Engineer",
+      quote: "৩ মাসে ড্রাফটসম্যান থেকে ডিজাইনার। প্রতিটি টাকা সার্থক।",
+      name: "ফাতিমা আক্তার",
+      role: "প্রজেক্ট ইঞ্জিনিয়ার",
     },
   ];
 
@@ -54,15 +54,15 @@ const SocialProofSection = () => {
           >
             <img
               src={mentorImage}
-              alt="Engr. Sahidul Islam"
+              alt="ইঞ্জি. সাহিদুল ইসলাম"
               className="w-24 h-24 rounded-full object-cover border-4 border-accent"
             />
             <div className="text-center md:text-left">
               <h3 className="font-heading text-xl font-bold text-foreground">
-                Created by Engr. Sahidul Islam
+                তৈরি করেছেন ইঞ্জি. সাহিদুল ইসলাম
               </h3>
               <p className="text-muted-foreground">
-                25+ years of industrial electrical design experience, RSC Audit Expert
+                ২৫+ বছরের ইন্ডাস্ট্রিয়াল ইলেকট্রিক্যাল ডিজাইন অভিজ্ঞতা, আরএসসি অডিট এক্সপার্ট
               </p>
             </div>
           </motion.div>
@@ -119,7 +119,7 @@ const SocialProofSection = () => {
               <button
                 onClick={prevTestimonial}
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-card transition-colors"
-                aria-label="Previous testimonial"
+                aria-label="পূর্ববর্তী টেস্টিমোনিয়াল"
               >
                 <ChevronLeft className="w-5 h-5 text-foreground" />
               </button>
@@ -130,13 +130,13 @@ const SocialProofSection = () => {
                   className={`w-2 h-2 rounded-full transition-colors ${
                     index === activeTestimonial ? "bg-accent" : "bg-border"
                   }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`টেস্টিমোনিয়াল ${index + 1} এ যান`}
                 />
               ))}
               <button
                 onClick={nextTestimonial}
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-card transition-colors"
-                aria-label="Next testimonial"
+                aria-label="পরবর্তী টেস্টিমোনিয়াল"
               >
                 <ChevronRight className="w-5 h-5 text-foreground" />
               </button>
