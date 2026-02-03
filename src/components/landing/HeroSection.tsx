@@ -1,91 +1,119 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
 import heroImage from "@/assets/hero-split.jpg";
 
 const HeroSection = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log("Lead captured:", { name, email });
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden blueprint-pattern">
-      {/* Background Image Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Background with outcome-focused image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Electrical Engineering Transformation"
-          className="w-full h-full object-cover opacity-40"
+          alt="Professional electrical design result"
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-engineering-blue-deep via-engineering-blue-deep/95 to-engineering-blue-deep/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       </div>
 
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 industrial-grid opacity-30" />
-
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 lg:py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-engineering-blue/50 border border-engineering-blue-light/30 text-sm text-muted-foreground mb-8"
-          >
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            Industrial Electrical Design Mastery
-          </motion.div>
-
-          {/* Headline */}
+      <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Headline - Stops user, promises clear outcome */}
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-heading text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-tight mb-6"
+            transition={{ duration: 0.6 }}
+            className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6"
           >
-            Stop Drawing Lines.
+            Become an Audit-Ready
             <br />
-            <span className="text-gradient-yellow">Start Engineering Safety.</span>
+            <span className="text-gradient-yellow">Industrial Electrical Designer</span>
           </motion.h1>
 
-          {/* Sub-headline */}
+          {/* Sub-headline - Adds context and clarifies promise */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Most engineers are stuck in the <span className="text-foreground font-semibold">'Draftsman Trap.'</span> Learn the Decision-Making System that protects careers and prevents factory closures.
+            Get the free skill assessment that shows exactly where your design knowledge gaps are—and how to fix them in 90 days.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* Hero Image - Visual proof of outcome */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mb-10"
           >
-            <Button variant="hero" size="xl" className="w-full sm:w-auto">
-              Check My Skill Gap
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button variant="heroSecondary" size="xl" className="w-full sm:w-auto">
-              <Play className="w-5 h-5" />
-              Watch the Manifesto
-            </Button>
-          </motion.div>
-
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-16 pt-8 border-t border-border/30"
-          >
-            <p className="text-sm text-muted-foreground mb-4">Trusted by engineers at leading industries</p>
-            <div className="flex flex-wrap justify-center gap-8 items-center opacity-60">
-              {["RMG Sector", "Power Plants", "Manufacturing", "Construction"].map((name) => (
-                <span key={name} className="font-heading text-lg tracking-wider text-foreground/70">{name}</span>
-              ))}
+            <div className="relative mx-auto max-w-md rounded-xl overflow-hidden border border-border/50 shadow-lg">
+              <img
+                src={heroImage}
+                alt="Code-compliant electrical design example"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-left">
+                <span className="text-xs text-accent font-semibold uppercase tracking-wider">What You'll Achieve</span>
+                <p className="text-sm text-foreground font-medium">BNBC-2020 & NFPA-70 Compliant Designs</p>
+              </div>
             </div>
           </motion.div>
+
+          {/* Lead Capture Form - Minimal fields */}
+          <motion.form
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            onSubmit={handleSubmit}
+            className="max-w-md mx-auto space-y-4"
+          >
+            <Input
+              type="text"
+              placeholder="Your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="h-14 text-base bg-card border-border/50 placeholder:text-muted-foreground/60"
+              required
+            />
+            <Input
+              type="email"
+              placeholder="Your best email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="h-14 text-base bg-card border-border/50 placeholder:text-muted-foreground/60"
+              required
+            />
+            
+            {/* CTA - States what user gets and how */}
+            <Button type="submit" variant="hero" size="xl" className="w-full">
+              Get My Free Skill Assessment
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </motion.form>
+
+          {/* Justification - Why give email */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-sm text-muted-foreground mt-4"
+          >
+            ✓ Free 5-minute assessment · ✓ Personalized gap report · ✓ No spam, ever
+          </motion.p>
         </div>
       </div>
 
